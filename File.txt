@@ -1,0 +1,6 @@
+vikash,21,viku@abc.com,male,StudentYesravi,21,RAVI@ABC.COM,male,StudentYesgjnh,ghj,dytj,female,StudentYes
+th,sth,hst,male,Teacher,Yes
+,,,male,,No
+,,,male,,No
+,,,male,,No
+,,,male,,No

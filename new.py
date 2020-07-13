@@ -1,0 +1,19 @@
+m=int(input())
+n=input("enter")
+lst=[]
+w=n.rstrip().split()
+lst.append(w)
+x=0
+c=0
+for x in range(m-1):
+    if(lst[x]==lst[x+1]):
+        if(lst[x]==lst[x+2]):
+            x=x+2
+            c=c+1
+        else:
+            x=x+1
+            c=c+1
+    else:
+        x=x+2
+        c=c+1
+    print(c)
