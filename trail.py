@@ -1,13 +1,33 @@
-m=int(input())
-n=input("")
-lst=n.rstrip().split()
-x=0
-c=0
-while(x<m):
-    if(x<m-2 and lst[x]==lst[x+1] and lst[x]==lst[x+2]):
-            x=x+2
-            c=c+1
+def main():
+    size = int(input())
+    cell = input().split()
+
+    for i in range(0, len(cell)):
+        cell[i] = int(cell[i])
+    m = -1
+    for i in range(0, 23):
+        if m < check_cycle(cell, i):
+            m = check_cycle(cell, i)
+    print(m)
+
+
+def check_cycle(cell, start):
+    i = start
+    if i in cell:
+        cycle = [i]
+        j = i
+        while 1:
+            for k in cycle:
+                if cycle.count(k) >= 2:
+                    if cycle[0] == cycle[-1]:
+                        return len(cycle)-1
+                    else:
+                        return 0
+            else:
+                cycle.append(cell[j])
+                j = cell[j]
     else:
-        x=x+2
-        c=c+1
-print(c)
+        return 0
+
+
+main()
